@@ -27,7 +27,17 @@ public class Main extends HttpServlet {
         server.start();
         server.join();
     }
-
+    
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        PrintWriter pagina=resp.getWriter();
+        resp.setContentType("text/html");
+        String valor = req.getParameter("elementos");
+        System.out.println(valor);
+        
+    }
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -37,7 +47,7 @@ public class Main extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.print("<html>\n"
                 + "<body>\n"
-                + "<form action=\"Main\" method=\"GET\">\n"
+                + "<form action=\"Main\" method=\"POST\">\n"
                 +"Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)\n"
                 + "<br/>\n"
                 + "Datos: <input type=\"text\" name=\"elementos\">\n"
@@ -51,8 +61,7 @@ public class Main extends HttpServlet {
 
     private void showHome(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        String valor = req.getParameter("elementos");
-        System.out.println(valor);
+        
         
     }
 }
