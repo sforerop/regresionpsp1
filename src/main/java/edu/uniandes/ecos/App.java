@@ -24,16 +24,17 @@ public class App {
 
     public static void main(String[] args) {
 //        llenarListas();
-        calcularValores();
-        calcularB1();
-        caluclarB0();
-        caluclarR();
-        caluclarRcuadrado();
-        calcularYK();
-        System.out.println("Hello World!");
+//        calcularValores();
+//        calcularB1();
+//        caluclarB0();
+//        caluclarR();
+//        caluclarRcuadrado();
+//        calcularYK();
+//        System.out.println("Hello World!");
     }
     
     public void cargarDatosPantalla(String lista){
+        System.out.println(lista);
         String[] datos = lista.split("|");
         for (String dato : datos) {
             String [] valor = dato.split(",");
