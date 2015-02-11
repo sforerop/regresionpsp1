@@ -34,7 +34,7 @@ public class Main extends HttpServlet {
         if(req.getParameter("elementos") != null){
             showHome(req, resp);
         }else{
-            resp.getWriter().print("Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)!");
+            resp.getWriter().print("Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)! \n");
         PrintWriter out = resp.getWriter();
         out.print("<html>\n"
                 + "<body>\n"
