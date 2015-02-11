@@ -33,7 +33,7 @@ public class App {
 //        System.out.println("Hello World!");
     }
     
-    public void cargarDatosPantalla(String lista){
+    public static void cargarDatosPantalla(String lista){
         System.out.println(lista);
         String[] datos = lista.split("|");
         for (String dato : datos) {

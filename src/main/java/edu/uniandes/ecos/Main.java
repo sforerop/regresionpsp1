@@ -33,16 +33,15 @@ public class Main extends HttpServlet {
             throws ServletException, IOException {
         PrintWriter pagina=resp.getWriter();
         resp.setContentType("text/html");
-        String valor = req.getParameter("elementos");        
-        App app = new App();        
-        app.cargarDatosPantalla(valor);
+        String valor = req.getParameter("elementos");     
+        App.cargarDatosPantalla(valor);
         PrintWriter out = resp.getWriter();
-        out.print("B0 =" + app.getB0());
-        out.print("B1 =" + app.getB1());
-        out.print("R =" + app.getR());
-        out.print("R2 =" + app.getR2());
-        out.print("YK =" + app.getYK());
-        out.print("XK =" + app.getXK());
+        out.print("B0 =" + App.getB0());
+        out.print("B1 =" + App.getB1());
+        out.print("R =" + App.getR());
+        out.print("R2 =" + App.getR2());
+        out.print("YK =" + App.getYK());
+        out.print("XK =" + App.getXK());
         
         
     }
