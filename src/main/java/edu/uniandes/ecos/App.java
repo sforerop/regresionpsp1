@@ -31,12 +31,14 @@ public class App {
 //        caluclarRcuadrado();
 //        calcularYK();
 //        System.out.println("Hello World!");
+//        cargarDatosPantalla("0,1->2,5->3,6");
     }
     
     public static void cargarDatosPantalla(String lista){
         System.out.println("ESTA ES LA LISTA->"+lista);
-        String[] datos = lista.split("|");
+        String[] datos = lista.split("->");
         for (String dato : datos) {
+            System.out.println("ESTA ES LA DATOOO->"+dato);
             String [] valor = dato.split(",");
             vector.add(new vector(Double.parseDouble(valor[0]), Double.parseDouble(valor[1])));
         }        
