@@ -34,7 +34,8 @@ public class Main extends HttpServlet {
         PrintWriter pagina=resp.getWriter();
         resp.setContentType("text/html");
         String valor = req.getParameter("elementos");
-        System.out.println(valor);
+        PrintWriter out = resp.getWriter();
+        out.print(valor);
         
     }
     
