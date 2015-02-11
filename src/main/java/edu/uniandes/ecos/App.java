@@ -40,6 +40,13 @@ public class App {
             vector.add(new vector(Double.parseDouble(valor[0]), Double.parseDouble(valor[1])));
         }        
         XK = 386.0;
+        
+        calcularValores();
+        calcularB1();
+        caluclarB0();
+        caluclarR();
+        caluclarRcuadrado();
+        calcularYK();
     }
     
     public static void calcularYK(){
