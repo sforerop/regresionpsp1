@@ -31,23 +31,27 @@ public class Main extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        if(req.getParameter("elementos") != null){
+            showHome(req, resp);
+        }else{
+            resp.getWriter().print("Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)!");
         PrintWriter out = resp.getWriter();
         out.print("<html>\n"
                 + "<body>\n"
-                + "<form action=\"HelloForm\" method=\"GET\">\n"
-                + "First Name: <input type=\"text\" name=\"first_name\">\n"
+                + "<form action=\"Main\" method=\"GET\">\n"
+                + "Datos: <input type=\"text\" name=\"elementos\">\n"
                 + "<br />\n"
-                + "Last Name: <input type=\"text\" name=\"last_name\" />\n"
                 + "<input type=\"submit\" value=\"Submit\" />\n"
                 + "</form>\n"
                 + "</body>\n"
                 + "</html>");
-
-        showHome(req, resp);
+        }        
     }
 
     private void showHome(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        resp.getWriter().print("Contador de lineas de codigo!");
+        String valor = req.getParameter("elementos");
+        System.out.println(valor);
+        
     }
 }
