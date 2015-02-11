@@ -23,7 +23,7 @@ public class App {
     public static Double XK = 0.0;
 
     public static void main(String[] args) {
-        llenarListas();
+//        llenarListas();
         calcularValores();
         calcularB1();
         caluclarB0();
@@ -31,6 +31,15 @@ public class App {
         caluclarRcuadrado();
         calcularYK();
         System.out.println("Hello World!");
+    }
+    
+    public void cargarDatosPantalla(String lista){
+        String[] datos = lista.split("|");
+        for (String dato : datos) {
+            String [] valor = dato.split(",");
+            vector.add(new vector(Double.parseDouble(valor[0]), Double.parseDouble(valor[1])));
+        }        
+        XK = 386.0;
     }
     
     public static void calcularYK(){
@@ -98,4 +107,54 @@ public class App {
         vector.add(new vector(961.0, 1601.0));
         XK = 386.0;
     }
+
+    public static Double getB1() {
+        return B1;
+    }
+
+    public static void setB1(Double B1) {
+        App.B1 = B1;
+    }
+
+    public static Double getB0() {
+        return B0;
+    }
+
+    public static void setB0(Double B0) {
+        App.B0 = B0;
+    }
+
+    public static Double getR() {
+        return R;
+    }
+
+    public static void setR(Double R) {
+        App.R = R;
+    }
+
+    public static Double getR2() {
+        return R2;
+    }
+
+    public static void setR2(Double R2) {
+        App.R2 = R2;
+    }
+
+    public static Double getYK() {
+        return YK;
+    }
+
+    public static void setYK(Double YK) {
+        App.YK = YK;
+    }
+
+    public static Double getXK() {
+        return XK;
+    }
+
+    public static void setXK(Double XK) {
+        App.XK = XK;
+    }
+    
+    
 }

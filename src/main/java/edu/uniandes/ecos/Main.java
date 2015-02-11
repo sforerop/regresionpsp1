@@ -33,9 +33,17 @@ public class Main extends HttpServlet {
             throws ServletException, IOException {
         PrintWriter pagina=resp.getWriter();
         resp.setContentType("text/html");
-        String valor = req.getParameter("elementos");
+        String valor = req.getParameter("elementos");        
+        App app = new App();        
+        app.cargarDatosPantalla(valor);
         PrintWriter out = resp.getWriter();
-        out.print(valor);
+        out.print("B0 =" + app.getB0());
+        out.print("B1 =" + app.getB1());
+        out.print("R =" + app.getR());
+        out.print("R2 =" + app.getR2());
+        out.print("YK =" + app.getYK());
+        out.print("XK =" + app.getXK());
+        
         
     }
     
@@ -49,7 +57,7 @@ public class Main extends HttpServlet {
         out.print("<html>\n"
                 + "<body>\n"
                 + "<form action=\"/Main\" method=\"POST\">\n"
-                +"Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)\n"
+                +"Ingrese loas datos X,Y separados por comas y separe las duplas con | \nEjemplo: 0,1|2,5|3,6\n"
                 + "<br/>\n"
                 + "Datos: <input type=\"text\" name=\"elementos\">\n"
                 + "<br />\n"
