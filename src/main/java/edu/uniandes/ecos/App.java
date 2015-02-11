@@ -34,7 +34,7 @@ public class App {
     }
     
     public static void cargarDatosPantalla(String lista){
-        System.out.println(lista);
+        System.out.println("ESTA ES LA LISTA->"+lista);
         String[] datos = lista.split("|");
         for (String dato : datos) {
             String [] valor = dato.split(",");
