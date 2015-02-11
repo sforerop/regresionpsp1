@@ -34,11 +34,12 @@ public class Main extends HttpServlet {
         if(req.getParameter("elementos") != null){
             showHome(req, resp);
         }else{
-            resp.getWriter().print("Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)! \n");
         PrintWriter out = resp.getWriter();
         out.print("<html>\n"
                 + "<body>\n"
                 + "<form action=\"Main\" method=\"GET\">\n"
+                +"Ingrese loas datos X,Y entre parentesis separados por comas todos los datos seguidos\nEjemplo: (0,1)(2,5)\n"
+                + "<br/>\n"
                 + "Datos: <input type=\"text\" name=\"elementos\">\n"
                 + "<br />\n"
                 + "<input type=\"submit\" value=\"Submit\" />\n"
