@@ -23,14 +23,14 @@ public class App {
     public static Double XK = 0.0;
 
     public static void main(String[] args) {
-        llenarListas();
-        calcularValores();
-        calcularB1();
-        caluclarB0();
-        caluclarR();
-        caluclarRcuadrado();
-        calcularYK();
-        System.out.println("Hello World!");
+//        llenarListas();
+//        calcularValores();
+//        calcularB1();
+//        caluclarB0();
+//        caluclarR();
+//        caluclarRcuadrado();
+//        calcularYK();
+//        System.out.println("Hello World!");
 //        cargarDatosPantalla("0,1->2,5->3,6");
     }
     
