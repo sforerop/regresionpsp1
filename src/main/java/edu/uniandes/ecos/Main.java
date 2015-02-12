@@ -37,12 +37,12 @@ public class Main extends HttpServlet {
         App app = new App();        
         App.cargarDatosPantalla(valor);
         PrintWriter out = resp.getWriter();
-        out.print("B0 =" + App.getB0());
-        out.print("B1 =" + App.getB1());
-        out.print("R =" + App.getR());
-        out.print("R2 =" + App.getR2());
-        out.print("YK =" + App.getYK());
-        out.print("XK =" + App.getXK());
+        out.print("B0 =" + App.getB0() + "\n");
+        out.print("B1 =" + App.getB1()+ "\n");
+        out.print("R =" + App.getR()+ "\n");
+        out.print("R2 =" + App.getR2()+ "\n");
+        out.print("YK =" + App.getYK()+ "\n");
+        out.print("XK =" + App.getXK()+ "\n");
         
         
     }
